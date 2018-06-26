@@ -30,7 +30,7 @@ function makeGrid() {    //function called to make grid
   var color = Color.val();
   
  if(width > 40 || height > 100){  
-  alert("Maximum grid of 40 width and 100 height") 
+  alert("Maximum grid size of 40 width and 100 height"); 
  }
   
   else {
@@ -65,6 +65,8 @@ $("#specs-submit").click(function (){   //event handler when submit button is cl
   makeGrid();
   $('.btn').removeClass("btn-clicked");    // removing btn-clicked class from all buttons
   $("#grid-draw").addClass('btn-clicked');    //adding btn-clicked class to draw button to tell the user that they can draw now
+  var color = Color.val(); 
+  ChangeGridColor(color);
 })
 
 
