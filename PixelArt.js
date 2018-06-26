@@ -24,11 +24,17 @@ function clearGrid(){   //function for removing table(grid) from the page
 
 
 function makeGrid() {    //function called to make grid
-  clearGrid();    // removing grid currently on the page
   
   var width = Width.val();   //storing the users input with the help of the variables assigned at the top of the file
   var height = Height.val();
   var color = Color.val();
+  
+ if(width > 40 || height > 100){  
+  alert("Maximum grid of 40 width and 100 height") 
+ }
+  
+  else {
+   clearGrid();    // removing grid currently on the page
   
   $(".canvas").append("<table id='pixelCanvas'></table>");   //adding an empty table to the page
    
@@ -45,6 +51,7 @@ $("#pixelCanvas").append("<tr class ='" + x + "'</tr>"); // nested looping to ad
         }
     }
  ChangeGridColor(color); //enabling td background-color to change to the color inputted by the user on click
+  }
 }
 
 
