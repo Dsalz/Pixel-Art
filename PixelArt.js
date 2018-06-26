@@ -29,7 +29,7 @@ function makeGrid() {    //function called to make grid
   var height = Height.val();
   var color = Color.val();
   
- if(width > 40 || height > 100){  
+ if(width > 100 || height > 40){  
   alert("Maximum grid size of 40 width and 100 height"); 
  }
   
