@@ -57,10 +57,9 @@ $("#colorPicker").on("change", function(){  //Dynamically updating the color of 
 
 
 $("#specs-submit").click(function (){   //event handler when submit button is clicked
-   if(Width.val() > 100 || Height.val() > 40){  
+   if(Width.val() > 100 || Height.val() > 40){                 // checking that constraints are not exceded
   alert("Maximum grid size of 40 width and 100 height"); 
  }
-  
   else {
   makeGrid();
   $('.btn').removeClass("btn-clicked");    // removing btn-clicked class from all buttons
