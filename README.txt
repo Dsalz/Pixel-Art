@@ -1,4 +1,4 @@
-Damola Salisu's Pixel Art Application.
+## Damola Salisu's Pixel Art Application.
 
 Here is the repository of a pixel art application i made using HTML, CSS and Jquery.
 
