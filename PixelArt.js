@@ -29,12 +29,7 @@ function makeGrid() {    //function called to make grid
   var height = Height.val();
   var color = Color.val();
   
- if(width > 100 || height > 40){  
-  alert("Maximum grid size of 40 width and 100 height"); 
- }
-  
-  else {
-   clearGrid();    // removing grid currently on the page
+  clearGrid();    // removing grid currently on the page
   
   $(".canvas").append("<table id='pixelCanvas'></table>");   //adding an empty table to the page
    
@@ -51,7 +46,7 @@ $("#pixelCanvas").append("<tr class ='" + x + "'</tr>"); // nested looping to ad
         }
     }
  ChangeGridColor(color); //enabling td background-color to change to the color inputted by the user on click
-  }
+  
 }
 
 
@@ -62,11 +57,15 @@ $("#colorPicker").on("change", function(){  //Dynamically updating the color of 
 
 
 $("#specs-submit").click(function (){   //event handler when submit button is clicked
+   if(Width.val() > 100 || Height.val() > 40){  
+  alert("Maximum grid size of 40 width and 100 height"); 
+ }
+  
+  else {
   makeGrid();
   $('.btn').removeClass("btn-clicked");    // removing btn-clicked class from all buttons
   $("#grid-draw").addClass('btn-clicked');    //adding btn-clicked class to draw button to tell the user that they can draw now
-  var color = Color.val(); 
-  ChangeGridColor(color);
+  }
 })
 
 
