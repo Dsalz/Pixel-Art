@@ -6,7 +6,7 @@ This project was coded as required to complete the ALC/Google Schorlaship Front 
 
 It is hosted at 
 
-http://dsalz.github.io/PixelArt
+http://dsalz.github.io/Pixel-Art
 
 or 
 
