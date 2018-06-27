@@ -30,8 +30,8 @@ function makeGrid() {    //function called to make grid
   
   $(".canvas").append("<table id='pixelCanvas'></table>");   //adding an empty table to the page
    
-  var canvasWidth = (width * 20) + " px";     //calculating the height and width of the new table (for the white background color)
-  var canvasHeight = (height * 20) + " px";
+  var canvasWidth = (width * 1.5) + "vw";     //calculating the height and width of the new table (for the white background color)
+  var canvasHeight = (height * 1.5) + "vw";
 
   $("#pixelCanvas").css("width" , canvasWidth);   //assign calculated values to the table
   $("#pixelCanvas").css("height" , canvasHeight);
