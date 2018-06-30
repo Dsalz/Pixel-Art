@@ -42,7 +42,7 @@ $("#pixelCanvas").append("<tr class ='" + x + "'</tr>"); // nested looping to ad
 
 
 $("#colorPicker").on("change", () => {  //Dynamically updating the color of the td on click whenever the color is changed by the user
-  var color = Color.val();
+  let color = Color.val();
   ChangeGridColor(color);
 });
 
@@ -63,7 +63,7 @@ $("#grid-delete").click( () => {    //event handler when clear button is clicked
   $('.btn').removeClass("btn-clicked");  // removing btn-clicked class from all buttons
   $("#grid-draw").addClass('btn-clicked'); //adding btn-clicked class to draw button to tell the user that they can draw now
   $('td').css("background-color", "transparent"); // wiping canvas clean by changing the color of all the elements to transparent
-  var color = Color.val(); 
+  let color = Color.val(); 
   ChangeGridColor(color); // getting color in the color picker and assigning the td to it when clicked
 })
 
@@ -71,7 +71,7 @@ $("#grid-delete").click( () => {    //event handler when clear button is clicked
 $("#grid-draw").click( () => {   //event handler when draw button is clicked
   $(this).addClass('btn-clicked'); //adding btn-clicked class to the draw button to tell the user that they can draw now
   $('#grid-erase').removeClass('btn-clicked') // removing btn-clicked class from the erase button
-    var color = Color.val();
+    let color = Color.val();
     ChangeGridColor(color); // getting color in the color picker and assigning the td to it when clicked
 })
 
