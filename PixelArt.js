@@ -9,8 +9,8 @@ const Width = $("#inputWidth");    //store the input selectors for future refere
 const Height = $("#inputHeight");
 const Color = $("#colorPicker");
 
-const ChangeGridColor = (color) => {    //Function for changing td color when clicked created to reduce repetitive codes and implement "DRY"
-  $('td').click(() => {
+const ChangeGridColor = function (color){    //Function for changing td color when clicked created to reduce repetitive codes and implement "DRY"
+  $('td').click((e) => {
     $(this).css("background-color", color);
   });
 }
@@ -69,14 +69,14 @@ $("#grid-delete").click( () => {    //event handler when clear button is clicked
 
 
 $("#grid-draw").click( () => {   //event handler when draw button is clicked
-  $(this).addClass('btn-clicked'); //adding btn-clicked class to the draw button to tell the user that they can draw now
+  $("#grid-draw").addClass('btn-clicked'); //adding btn-clicked class to the draw button to tell the user that they can draw now
   $('#grid-erase').removeClass('btn-clicked') // removing btn-clicked class from the erase button
     let color = Color.val();
     ChangeGridColor(color); // getting color in the color picker and assigning the td to it when clicked
 })
 
 $("#grid-erase").click( () => {    //event handler when erase button is clicked
-$(this).addClass('btn-clicked'); //adding btn-clicked class to the erase button to remind the user that they are currently erasing
+$("#grid-erase").addClass('btn-clicked'); //adding btn-clicked class to the erase button to remind the user that they are currently erasing
 $('#grid-draw').removeClass('btn-clicked') // removing btn-clicked class from the draw button
  ChangeGridColor("transparent");   // assigning the td background color to transparent when clicked thereby removing any color there previously
 })
