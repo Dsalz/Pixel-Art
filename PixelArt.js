@@ -29,12 +29,6 @@ function makeGrid() {    //function called to make grid
   clearGrid();    // removing grid currently on the page
   
   $(".canvas").append("<table id='pixelCanvas'></table>");   //adding an empty table to the page
-   
-//   var canvasWidth = (width * 20) + " px";     //calculating the height and width of the new table (for the white background color)
-//   var canvasHeight = (height * 20) + " px";
-
-//   $("#pixelCanvas").css("width" , canvasWidth);   //assign calculated values to the table
-//   $("#pixelCanvas").css("height" , canvasHeight);
   
     for(var x =0 ; x<height ; x++){    //looping with the given values to dynamically create the rows (each with a class of the index)
 $("#pixelCanvas").append("<tr class ='" + x + "'</tr>"); // nested looping to add the number of columns inputted by the user to the table row using the index class assigned to each row
