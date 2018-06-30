@@ -9,8 +9,8 @@ const Width = $("#inputWidth");    //store the input selectors for future refere
 const Height = $("#inputHeight");
 const Color = $("#colorPicker");
 
-const ChangeGridColor = function (color){    //Function for changing td color when clicked created to reduce repetitive codes and implement "DRY"
-  $('td').click(() => {
+const ChangeGridColor = (color) => {    //Function for changing td color when clicked created to reduce repetitive codes and implement "DRY"
+  $('td').click(function() {
     $(this).css("background-color", color);
   });
 }
