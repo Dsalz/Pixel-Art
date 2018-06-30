@@ -10,7 +10,7 @@ const Height = $("#inputHeight");
 const Color = $("#colorPicker");
 
 const ChangeGridColor = function (color){    //Function for changing td color when clicked created to reduce repetitive codes and implement "DRY"
-  $('td').click((e) => {
+  $('td').click(() => {
     $(this).css("background-color", color);
   });
 }
