@@ -12,7 +12,7 @@ const Color = $("#colorPicker");
 const ChangeGridColor = (color) => {    //Function for changing td color when clicked created to reduce repetitive codes and implement "DRY"
   $('td').click(() => {
     $(this).css("background-color", color);
-  };
+  });
 }
 
 const clearGrid = () => {   //function for removing table(grid) from the page
@@ -44,7 +44,7 @@ $("#pixelCanvas").append("<tr class ='" + x + "'</tr>"); // nested looping to ad
 $("#colorPicker").on("change", () => {  //Dynamically updating the color of the td on click whenever the color is changed by the user
   var color = Color.val();
   ChangeGridColor(color);
-})
+});
 
 
 $("#specs-submit").click( () => {   //event handler when submit button is clicked
@@ -56,7 +56,7 @@ $("#specs-submit").click( () => {   //event handler when submit button is clicke
   $('.btn').removeClass("btn-clicked");    // removing btn-clicked class from all buttons
   $("#grid-draw").addClass('btn-clicked');    //adding btn-clicked class to draw button to tell the user that they can draw now
   }
-})
+});
 
 
 $("#grid-delete").click( () => {    //event handler when clear button is clicked
