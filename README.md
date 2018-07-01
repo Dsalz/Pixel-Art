@@ -29,7 +29,7 @@ This project was coded as required on completion of the ALC/Google Schorlaship F
 
 ## Link_to_Project
 
-To view the **_Pixel Art Maker**_ please click [here](http://dsalz.github.io/Pixel-Art).
+To view the **_Pixel Art Maker_** please click [here](http://dsalz.github.io/Pixel-Art).
 
 ## Experience
 
